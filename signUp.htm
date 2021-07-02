@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scheme Land.com</title>
+    <link rel="stylesheet" href="signUp.css">
+</head>
+
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href=''>Scheme Land</a>
+            </div>
+            <nav>
+                <ul id='MenuItems'>
+                    <li><a href='#'>Home</a></li>
+                    <li><a href='#'>About Us</a></li>
+                    <li><a href='#'>Services</a></li>
+                    <li><a href='/project/contactUs.htm'>Contact Us</a></li>
+                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'"
+                            style="width:auto;">Login</button></li>
+                </ul>
+            </nav>
+        </div>
+        <div id='login-form' class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
+                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text' class='input-field' placeholder='Adhar Number' id="adhar" required>
+                    <input type='password' class='input-field' placeholder='Enter Password' id="password" required>
+                    <input type='checkbox' class='check-box'><span>Remember Password</span>
+                    <button type='submit' class='submit-btn' onclick="validate()">Log in</button>
+                    <div id="snackbar">You Have Logged In Sucessfully.</div>
+                    <!-- <div id="snackbar2">Your Adhar Number Or Password Is Wrong. </div> -->
+                </form>
+                <form id='register' class='input-group-register'>
+                    <input type='text' class='input-field' placeholder='First Name' required>
+                    <input type='text' class='input-field' placeholder='Last Name ' required>
+                    <input type='phone' class='input-field' placeholder='Adhar Number' required>
+                    <input type='password' class='input-field' placeholder='Enter Password' required>
+                    <input type='password' class='input-field' placeholder='Confirm Password' required>
+                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
+                    <button type='submit' class='submit-btn'>Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="signUp.js"></script>
+</body>
+</html>
