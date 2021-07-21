@@ -1,4 +1,4 @@
- *
+*
 {
     margin: 0;
     padding: 0;
@@ -6,28 +6,43 @@
 }
 .full-page
 {
-    height: 100%;
+  height: 100%;
 	width: 100%;
-	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("../Images/bg12.jpg");
+  background: url("http://sfwallpaper.com/images/background-image-for-website-1.jpg");
 	background-position: center;
 	background-size: cover;
 	position: absolute;
 }
+.logo-container{
+  margin-left: 25px;
+  width: 5%;
+}
+.logo{
+  width: 100%;
+  border: none;
+  border-radius: 100%;
+}
+
 .navbar
 {
+    /* background-color: rgb(220,228,181); */
+    background-image: linear-gradient(to right, rgba(191, 222, 146, 0.80) , rgba(209, 231, 179, 0.80));
     display: flex;
     align-items: center;
-    padding: 20px;
-    padding-left: 50px;
-    padding-right: 30px;
-    padding-top: 50px;
+    padding: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 30px;
+    box-shadow:
+           inset 0 -3em 3em rgba(0,0,0,0.1),
+           0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 nav
 {
     flex: 1;
     text-align: right;
 }
-nav ul 
+nav ul
 {
     display: inline-block;
     list-style: none;
@@ -41,13 +56,13 @@ nav ul li a
 {
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: black;
     font-family: sans-serif;
 }
 nav ul li button
 {
     font-size: 20px;
-    color: white;
+    color: black;
     outline: none;
     border: none;
     background: transparent;
@@ -56,48 +71,56 @@ nav ul li button
 }
 nav ul li button:hover
 {
-    color: aqua;
+    text-decoration: underline;
 }
 nav ul li a:hover
 {
-    color: aqua;
+    text-decoration: underline;
 }
-a
+/* a
 {
     text-decoration: none;
     color: palevioletred;
     font-size: 28px;
-}
+} */
 #login-form
 {
     display: none;
+    padding: 25px;
 }
 
 .form-box
 {
-    width:380px;
+  width:380px;
 	height:480px;
 	position:relative;
+
+  box-shadow:
+         inset 0 -3em 3em rgba(0,0,0,0.1),
+         0.3em 0.3em 1em rgba(0,0,0,0.3);
+
+  border: none;
+  border-radius: 10px;
 	margin:2% auto;
-	background:rgba(0,0,0,0.3);
 	padding:10px;
-    overflow: hidden;
+  overflow: hidden;
 }
 .button-box
 {
 	width:220px;
 	margin:35px auto;
 	position:relative;
-	box-shadow: 0 0 20px 9px #d89952;
-	border-radius: 30px;
+  border:1px solid black;
+  border-radius: 30px;
 }
 .toggle-btn
 {
 	padding:10px 30px;
 	cursor:pointer;
-    color: white;
+  color: black;
 	background:transparent;
 	border:0;
+  border-radius: 10px;
 	outline: none;
 	position: relative;
 }
@@ -108,7 +131,9 @@ a
 	position: absolute;
 	width: 110px;
 	height: 100%;
-	background: #F3C693;
+	/* background: #F3C693; */
+  background: rgb(178, 159, 226);
+  border: none;
 	border-radius: 30px;
 	transition: .5s;
 }
@@ -121,7 +146,7 @@ a
 }
 .input-group-register
 {
-    top: 120px;
+  top: 120px;
 	position:absolute;
 	width:280px;
 	transition:.5s;
@@ -145,11 +170,11 @@ a
 	cursor: pointer;
 	display: block;
 	margin: auto;
-	background: #F3C693;
+	background: rgb(178, 159, 226);
 	border: 0;
 	outline: none;
 	border-radius: 30px;
-    padding-bottom: 10px;
+  padding-bottom: 10px;
 }
 .check-box
 {
@@ -157,9 +182,9 @@ a
 }
 span
 {
-	color:#777;
+	color:black;
 	font-size:13px;
-    font-weight: bolder;
+  font-weight: bolder;
 	bottom:68px;
 	position:absolute;
 }
@@ -169,7 +194,7 @@ span
 }
 #login input
 {
-	color:white;
+	color:black;
 	font-size:15px;
 }
 #register
@@ -178,7 +203,7 @@ span
 }
 #register input
 {
-	color:white;
+	color:black;
 	font-size: 15px;
 }
 
@@ -201,7 +226,7 @@ span
 	left: 50%; /* Center the snackbar */
 	bottom: 30px; /* 30px from the bottom */
   }
-  
+
   /* Show the snackbar when clicking on a button (class added with JavaScript) */
   #snackbar.show{
 	visibility: visible; /* Show the snackbar */
@@ -210,23 +235,23 @@ span
 	-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
 	animation: fadein 0.5s, fadeout 0.5s 2.5s;
   }
-  
+
   /* Animations to fade the snackbar in and out */
   @-webkit-keyframes fadein {
 	from {bottom: 0; opacity: 0;}
 	to {bottom: 30px; opacity: 1;}
   }
-  
+
   @keyframes fadein {
 	from {bottom: 0; opacity: 0;}
 	to {bottom: 30px; opacity: 1;}
   }
-  
+
   @-webkit-keyframes fadeout {
 	from {bottom: 30px; opacity: 1;}
 	to {bottom: 0; opacity: 0;}
   }
-  
+
   @keyframes fadeout {
 	from {bottom: 30px; opacity: 1;}
 	to {bottom: 0; opacity: 0;}
