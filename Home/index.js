@@ -1,43 +1,19 @@
-var x = document.getElementById('login');
-var y = document.getElementById('register');
-var z = document.getElementById('btn');
+var slideIndex = 0;
+showSlides();
 
-function register() {
-    x.style.left = '400px';
-    y.style.left = '50px';
-    z.style.left = '110px';
-}
-
-function login() {
-    x.style.left = '50px';
-    y.style.left = '450px';
-    z.style.left = '0px';
-}
-
-var modal = document.getElementById('login-form');
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-function validate(){
-    // var adhar=document.getElementById("adhar").value;
-    // var password=document.getElementById("password").value;
-    // if((adhar=="6376365442" && password=="divyansh") || (adhar=="9414045905" && password=="shreyansh") ){
-    //     alert("Login Succesfully");
-    // }
-    // else{
-    //     alert("Wrong Adhar Number Or Password");
-    // }
-
-
-      // Get the snackbar DIV
-  var x = document.getElementById("snackbar");
-
-  // Add the "show" class to DIV
-  x.className = "show";
-
-  // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
 }

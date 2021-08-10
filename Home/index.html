@@ -2,8 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Scheme Land.com</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -19,37 +34,40 @@
                     <li><a href='#'>About Us</a></li>
                     <li><a href='#'>Services</a></li>
                     <li><a href='../ContactUs/contactUs.html'>Contact Us</a></li>
-                    <li><button class='loginbtn' onclick="document.getElementById('login-form').style.display='block'"
-                            style="width:auto;">Login</button></li>
+                    <li id="login"><a href='../Login/login.html'>Login/SignUp</a></li>
                 </ul>
             </nav>
         </div>
-        <div id='login-form' class='login-page'>
-            <div class="form-box">
-                <div class='button-box'>
-                    <div id='btn'></div>
-                    <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
-                    <button type='button' onclick='register()' class='toggle-btn'>Register</button>
-                </div>
-                <form id='login' class='input-group-login'>
-                    <input type='text' class='input-field' placeholder='Adhar Number' id="adhar" required>
-                    <input type='password' class='input-field' placeholder='Enter Password' id="password" required>
-                    <input type='checkbox' class='check-box'><span>Remember Password</span>
-                    <button type='submit' class='submit-btn' onclick="validate()">Log in</button>
-                    <div id="snackbar">You Have Logged In Sucessfully.</div>
-                </form>
-                <form id='register' class='input-group-register'>
-                    <input type='text' class='input-field' placeholder='First Name' required>
-                    <input type='text' class='input-field' placeholder='Last Name ' required>
-                    <input type='phone' class='input-field' placeholder='Adhar Number' required>
-                    <input type='password' class='input-field' placeholder='Enter Password' required>
-                    <input type='password' class='input-field' placeholder='Confirm Password' required>
-                    <input type='checkbox' class='check-box'><span>I agree to the terms and conditions</span>
-                    <button type='submit' class='submit-btn'>Register</button>
-                </form>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="../Images/education.jpg" style="width:100% ; height: 440px;">
+                <div class="text">Education is the most powerful weapon which you can use to change the world.</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="../Images/scheme.png" style="width:100%; height: 440px;">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="../Images/e learning.png" style="width:100%; height: 440px;">
+                <div class="text">Caption Three</div>
             </div>
         </div>
+        <br>
+        <div style="text-align:center;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </div>
+
     <script src="index.js"></script>
 </body>
 
