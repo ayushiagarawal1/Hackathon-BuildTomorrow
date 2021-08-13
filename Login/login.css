@@ -1,16 +1,26 @@
-body {
+*{
+    margin: 0;
+    padding: 0;
     overflow: hidden;
-    margin: 0px;
+    box-sizing: border-box;
   }
 
 #login-form {
-    padding: 120px;
-    background: url(../Images/login.jpg);
+    padding: 70px;
+    width: 100%;
+    background: url("http://sfwallpaper.com/images/background-image-for-website-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
+.logo-container {
+  width: 15%;
+}
+
+.logo {
+  width: 100%;
+}
 .form-box {
     width: 380px;
     height: 480px;
@@ -127,7 +137,31 @@ span {
     color: black;
     font-size: 15px;
 }
-
+.main_footer{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer{
+	width: 100%;
+	padding: 30px;
+	background-color: rgb(53, 66, 73);
+}
+.button{
+	width: 7%;
+  margin-bottom: 10px;
+}
+.btn1 a{
+	color: white;
+  font-size: 25px;
+}
+.fContent{
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 #snackbar {
     visibility: hidden;
     /* Hidden by default. Visible on click */
