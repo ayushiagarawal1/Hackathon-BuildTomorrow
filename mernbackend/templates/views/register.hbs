@@ -1,53 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="css/register.css">
-</head>
-<body>
-  <div class="logo-container">
-      <a href='/'><img src="../Images/logo.png" alt="logo" class="logo"></a>
-  </div>
-    <div id='login-form' class='login-page'>
-        <div class="form-box">
-            <div class='button-box'>
-                <div id='btn'></div>
-                <button type='button' onclick='login()' class='toggle-btn'>Log In</button>
-                <button type='button' onclick='register()' class='toggle-btn'>Sign Up</button>
-            </div>
-            <form id='login' class='input-group-login'>
-                <input type='text' class='input-field' placeholder='Adhar Number' id="adhar" required>
-                <input type='password' class='input-field' placeholder='Enter Password' id="password" required>
-                <input type='checkbox' class='check-box'><span>Remember Password</span>
-                <button type='submit' class='submit-btn' onclick="validate()">Log in</button>
-                <div id="snackbar">You Have Logged In Sucessfully.</div>
-            </form>
-            <form action="/register" method="POST" id='register' class='input-group-register'>
-                <input type='text' class='input-field' placeholder='First Name' value='' name='firstname' required>
-                <input type='text' class='input-field' placeholder='Last Name ' value='' name='lastname'required>
-                <input type='phone' class='input-field' placeholder='phone Number' value='' name='phone'required>
-                <input type='password' class='input-field' placeholder='Enter Password' value='' name='password'required>
-                <input type='password' class='input-field' placeholder='Confirm Password' value='' name='confirmpassword'required>
-                <input type='checkbox' class='check-box' value='' name='agreement'><span>I agree to the terms and conditions</span>
-                <button type='submit' class='submit-btn'value='' name='submit'>Register</button>
-            </form>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Register Form</title>
+        <link rel="stylesheet" href="css/register.css">
+    </head>
+    <body>
+        <div class="logo-container">
+            <a href='/'><img src="../Images/logo.png" alt="logo" class="logo"></a>
         </div>
-    </div>
-    <!-- footer -->
-        <div class="footer">
-            <div class="main_footer">
-                <div class="button">
-                  <div class="btn1"><a href="../ContactUs/contactUs.html">Contact us</a></div>
-                  </div>
-                <div class="fContent">
-                  <p>Terms of Use || privacy policy</p>
-                  <p>copyright@2021</p>
+
+        <div class="center">
+            <h1>Sign Up</h1>
+            <form method="post">
+                <div class="txt_field">
+                    <input type="text" name='firstname' required>
+                    <span></span>
+                    <label>First Name</label>
                 </div>
-            </div>
+                <div class="txt_field">
+                    <input type="text" name='lastname' required>
+                    <span></span>
+                    <label>Last Name</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" name='phone' required>
+                    <span></span>
+                    <label>Phone Number</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name='password' required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name='confirmpassword' required>
+                    <span></span>
+                    <label>Confirm Password</label>
+                </div>
+                <input type="submit" value="Sign Up">
+                <div class="signup_link">
+                </div>
+            </form>
         </div>
-    <script src="js/register.js"></script>
-</body>
+
+    </body>
 </html>

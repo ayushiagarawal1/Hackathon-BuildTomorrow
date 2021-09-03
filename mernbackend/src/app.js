@@ -4,6 +4,9 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+const hostname = '127.0.0.1';
+//const port = 3000;
+
 require("./db/connect");
 const Register = require("./models/registration");
 
@@ -27,6 +30,14 @@ app.get( "/register", (req, res) => {
   res.render("register");
 });
 
+app.get( "/login", (req, res) => {
+  res.render("login");
+});
+
+app.get( "/contactUs", (req, res) => {
+  res.render("contactUS");
+});
+
 //create a new user in our database
 app.post( "/register", async(req, res) => {
   try{
@@ -47,7 +58,7 @@ app.post( "/register", async(req, res) => {
       res.status(201).render("index");
     }
     else{
-      res.send("passwords are not matching!!");
+      res.send("Passwords are not matching!!");
     }
 
   }
@@ -56,6 +67,25 @@ app.post( "/register", async(req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`server is running at port no. ${port}`);
+//login Check(validation)
+app.post( "/login", async(req, res) => {
+  try {
+    const phonenumber = req.body.phone;
+    const pass = req.body.password;
+
+     const userphone = await Register.findOne({phonenumber:phone});
+      if(userphone.pass === password){
+        res.status(201).render("index");
+      }else{
+        res.send("Invalid Login Details!!!");
+      }
+
+  } catch (error) {
+    res.status(400).send("Invalid Login Details!!@!");
+  }
+});
+
+
+app.listen(port, hostname, () => {
+  console.log(`Server Is Running At Port No. http://${hostname}:${port}/`);
 });
